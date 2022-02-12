@@ -26,7 +26,7 @@ getEIA <- function(ID, key){
   ID <- unlist(strsplit(ID, ";"))
   key <- unlist(strsplit(key, ";"))
 
-  url <- paste("http://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
+  url <- paste("https://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
 
   doc <- xmlParse(file=url, isURL=TRUE)
 
@@ -55,7 +55,7 @@ getEIA <- function(ID, key){
   ID <- unlist(strsplit(ID, ";"))
   key <- unlist(strsplit(key, ";"))
 
-  url <- paste("http://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
+  url <- paste("https://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
 
   doc <- xmlParse(file=url, isURL=TRUE)
 
@@ -82,7 +82,7 @@ getEIA <- function(ID, key){
   ID <- unlist(strsplit(ID, ";"))
   key <- unlist(strsplit(key, ";"))
 
-  url <- paste("http://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
+  url <- paste("https://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
 
   doc <- xmlParse(file=url, isURL=TRUE)
 
@@ -110,7 +110,7 @@ getEIA <- function(ID, key){
   ID <- unlist(strsplit(ID, ";"))
   key <- unlist(strsplit(key, ";"))
 
-  url <- paste("http://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
+  url <- paste("https://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
 
   doc <- xmlParse(file=url, isURL=TRUE)
 
@@ -141,7 +141,7 @@ getEIA <- function(ID, key){
 
   ID <- unlist(strsplit(ID, ";"))
   key <- unlist(strsplit(key, ";"))
-  url <- paste("http://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
+  url <- paste("https://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
   doc <- xmlParse(file=url, isURL=TRUE)
   
   df <- data.frame(
@@ -179,7 +179,7 @@ getEIA <- function(ID, key){
 
   ID <- unlist(strsplit(ID, ";"))
   key <- unlist(strsplit(key, ";"))
-  url <- paste("http://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
+  url <- paste("https://api.eia.gov/series?series_id=", ID, "&api_key=", key, "&out=xml", sep="" )
   doc <- xmlParse(file=url, isURL=TRUE)
   
   df <- data.frame(
@@ -267,9 +267,9 @@ getCatEIA <- function(cat=999999999, key){
   key <- unlist(strsplit(key, ";"))
 
   ifelse(cat==999999999,
-         url <- paste("http://api.eia.gov/category?api_key=", key, "&out=xml", sep="" ),
+         url <- paste("https://api.eia.gov/category?api_key=", key, "&out=xml", sep="" ),
          
-         url <- paste("http://api.eia.gov/category?api_key=", key, 
+         url <- paste("https://api.eia.gov/category?api_key=", key, 
                       "&category_id=", cat, "&out=xml", sep="" )
   )
   for( i in 1:3 ) {
